@@ -67,12 +67,16 @@ public class Graph
 		}
 	}
 
+
+
 	/**
 	 * return the number of nodes in the graph
 	 */
 	public int numberOfNodes() {
 		return numNodes;
 	}
+
+
 
 	/**
 	 * return a set of nodes connected to the given node
@@ -82,6 +86,8 @@ public class Graph
 	public Set<Integer> getEdgesFrom(int node) {
 		return edgeList.get(node).keySet();
 	}
+
+
 
 
     public ArrayList<HashMap<Integer,Double>> getNodeList(){
@@ -96,12 +102,15 @@ public class Graph
 		return edgeList.get(src).containsKey(dest);
 	}
 
+
+
 	/**
 	 * return the weight of the edge from node src to node dest
 	 */
 	public double getWeight(int src, int dest) {
 		return edgeList.get(src).get(dest);
 	}
+
 
 	/**
 	 * calculate the total cost of a partitioning of the graph
@@ -111,6 +120,7 @@ public class Graph
 	 * You should feel free to adapt this code as needed. You can come up with a completely
 	 * different representation if you prefer.
 	 */
+
 	public double partitionCost(ArrayList<Integer> partitions) {
 		double cost = 0.0;
 		// iterate over all edges in the graph, and if the edges connect nodes in
